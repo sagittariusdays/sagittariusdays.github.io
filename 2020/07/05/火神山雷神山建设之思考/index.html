@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/slogo2.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/slogo2.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/slogo2.png">
+  <link rel="mask-icon" href="/images/slogo2.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Russo One:300,300italic,400,400italic,700,700italic|Titillium Web:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"sagittariusdays.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="本文主要参考了维基百科——火神山医院页面。如与事实有出入，以最新消息为准。 10天完工的大型医院：概述2020年初，武汉发现了一种新型的冠状病毒，截止到半年后的7月5日今天，全世界已经有超过1100万人感染，53万人因病去世，并且在疫情比较严重的国家比如美国，巴西，俄罗斯，疫情依然在大幅扩散。1 面对这次疫情，武汉在1月23日，农历腊月廿九，宣布兴建武汉火神山新型冠状病毒感染肺炎专科医院，又称火神">
+<meta property="og:type" content="article">
+<meta property="og:title" content="火神山雷神山建设之思考">
+<meta property="og:url" content="http://sagittariusdays.github.io/2020/07/05/%E7%81%AB%E7%A5%9E%E5%B1%B1%E9%9B%B7%E7%A5%9E%E5%B1%B1%E5%BB%BA%E8%AE%BE%E4%B9%8B%E6%80%9D%E8%80%83/index.html">
+<meta property="og:site_name" content="SagittariusDays">
+<meta property="og:description" content="本文主要参考了维基百科——火神山医院页面。如与事实有出入，以最新消息为准。 10天完工的大型医院：概述2020年初，武汉发现了一种新型的冠状病毒，截止到半年后的7月5日今天，全世界已经有超过1100万人感染，53万人因病去世，并且在疫情比较严重的国家比如美国，巴西，俄罗斯，疫情依然在大幅扩散。1 面对这次疫情，武汉在1月23日，农历腊月廿九，宣布兴建武汉火神山新型冠状病毒感染肺炎专科医院，又称火神">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://sagittariusdays.github.io/2020/07/05/%E7%81%AB%E7%A5%9E%E5%B1%B1%E9%9B%B7%E7%A5%9E%E5%B1%B1%E5%BB%BA%E8%AE%BE%E4%B9%8B%E6%80%9D%E8%80%83/%E5%9B%BE%E7%BA%B8.jpg">
+<meta property="og:image" content="http://sagittariusdays.github.io/2020/07/05/%E7%81%AB%E7%A5%9E%E5%B1%B1%E9%9B%B7%E7%A5%9E%E5%B1%B1%E5%BB%BA%E8%AE%BE%E4%B9%8B%E6%80%9D%E8%80%83/%E5%B7%A5%E7%A8%8B.jpg">
+<meta property="og:image" content="http://sagittariusdays.github.io/2020/07/05/%E7%81%AB%E7%A5%9E%E5%B1%B1%E9%9B%B7%E7%A5%9E%E5%B1%B1%E5%BB%BA%E8%AE%BE%E4%B9%8B%E6%80%9D%E8%80%83/%E6%96%BD%E5%B7%A5%E5%8D%B0%E8%B1%A1.jpg">
+<meta property="og:image" content="http://sagittariusdays.github.io/2020/07/05/%E7%81%AB%E7%A5%9E%E5%B1%B1%E9%9B%B7%E7%A5%9E%E5%B1%B1%E5%BB%BA%E8%AE%BE%E4%B9%8B%E6%80%9D%E8%80%83/%E6%B8%85%E6%B4%81%E9%80%9A%E9%81%93.jpeg">
+<meta property="og:image" content="http://sagittariusdays.github.io/2020/07/05/%E7%81%AB%E7%A5%9E%E5%B1%B1%E9%9B%B7%E7%A5%9E%E5%B1%B1%E5%BB%BA%E8%AE%BE%E4%B9%8B%E6%80%9D%E8%80%83/pmr.jpg">
+<meta property="article:published_time" content="2020-07-05T06:21:45.000Z">
+<meta property="article:modified_time" content="2020-07-05T10:33:36.859Z">
+<meta property="article:author" content="SaGIT">
+<meta property="article:tag" content="Memo">
+<meta property="article:tag" content="excerpt">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://sagittariusdays.github.io/2020/07/05/%E7%81%AB%E7%A5%9E%E5%B1%B1%E9%9B%B7%E7%A5%9E%E5%B1%B1%E5%BB%BA%E8%AE%BE%E4%B9%8B%E6%80%9D%E8%80%83/%E5%9B%BE%E7%BA%B8.jpg">
+
+<link rel="canonical" href="http://sagittariusdays.github.io/2020/07/05/%E7%81%AB%E7%A5%9E%E5%B1%B1%E9%9B%B7%E7%A5%9E%E5%B1%B1%E5%BB%BA%E8%AE%BE%E4%B9%8B%E6%80%9D%E8%80%83/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>火神山雷神山建设之思考 | SagittariusDays</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">SagittariusDays</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Next page: BLANK.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://sagittariusdays.github.io/2020/07/05/%E7%81%AB%E7%A5%9E%E5%B1%B1%E9%9B%B7%E7%A5%9E%E5%B1%B1%E5%BB%BA%E8%AE%BE%E4%B9%8B%E6%80%9D%E8%80%83/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="SaGIT">
+      <meta itemprop="description" content=""So busy yearning for the moon that he never saw the sixpence at his feet."">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SagittariusDays">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          火神山雷神山建设之思考
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-07-05 15:21:45 / 修改时间：19:33:36" itemprop="dateCreated datePublished" datetime="2020-07-05T15:21:45+09:00">2020-07-05</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/excerpt/" itemprop="url" rel="index"><span itemprop="name">excerpt</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><em>本文主要参考了<a href="%EF%BC%88https://zh.wikipedia.org/wiki/%E7%81%AB%E7%A5%9E%E5%B1%B1%E5%8C%BB%E9%99%A2">维基百科——火神山医院</a>页面。如与事实有出入，以最新消息为准。</em></p>
+<h4 id="10天完工的大型医院：概述"><a href="#10天完工的大型医院：概述" class="headerlink" title="10天完工的大型医院：概述"></a>10天完工的大型医院：概述</h4><p>2020年初，武汉发现了一种新型的冠状病毒，截止到半年后的7月5日今天，全世界已经有超过1100万人感染，53万人因病去世，并且在疫情比较严重的国家比如美国，巴西，俄罗斯，疫情依然在大幅扩散。<sup><a target="_blank" rel="noopener" href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">1</a></sup></p>
+<p>面对这次疫情，武汉在1月23日，农历腊月廿九，宣布兴建<strong>武汉火神山新型冠状病毒感染肺炎专科医院</strong>，又称<strong>火神山医院</strong>，参考了17年前<strong>北京小汤山非典医院</strong>的模式，用于专门收治2019年新型冠状病毒感染的病患。</p>
+<p>医院于1月25日大年初一开始兴建，施工工程由中建三局牵头，2月2日完工，交由<strong>中国人民解放军联勤保障部队</strong>（军队援鄂抗疫医疗队），2月3日进行接收推演，2月4日接收首批感染病患。<sup><a target="_blank" rel="noopener" href="https://epaper.hubeidaily.net/pc/content/202002/05/content_20630.html">2</a></sup></p>
+<p>工程实际施工9日，建筑总面积3.39万平米<sup><a target="_blank" rel="noopener" href="http://www.bjnews.com.cn/feature/2020/01/28/680885.html">3</a></sup>，设有床位1000张，设计依据《传染病医院建设标准》设立，并保有相关级别的传染病防控措施，医疗废水并不会排入邻近的水体，而是收集起来进行消毒处理之后统一排放，院内设有由华为提供的5G网络<sup><a target="_blank" rel="noopener" href="https://www.huawei.com/cn/publications/winwin-magazine/36/huo-shen-shan">4</a></sup>，满足了各级的需要。医院于2020年4月15日完成使命关闭。</p>
+<h4 id="工程上的思考"><a href="#工程上的思考" class="headerlink" title="工程上的思考"></a>工程上的思考</h4><h5 id="设计"><a href="#设计" class="headerlink" title="设计"></a>设计</h5><p>医院参考了2003年非典时期建于北京的小汤山医院模式，承担火神山医院设计任务的是<strong>中信建筑设计研究总院</strong><sup><a target="_blank" rel="noopener" href="http://www.xinhuanet.com/local/2020-02/06/c_1210463828.htm">5</a></sup>。</p>
+<p>时间上，1月23日上午10时武汉市宣布封城，当日下午决定建设医院，同时中信总院承接了设计任务。场地平整设计图于5小时之内完成，随即医院连夜开工。基本方案设计图于24小时内通过武汉市政府认可，1月26日凌晨全部施工图按时交付<sup><a target="_blank" rel="noopener" href="http://www.xinhuanet.com/local/2020-02/06/c_1210463828.htm">6</a></sup>，整体上工程时间为60小时左右。</p>
+<p>设计团队上，除了建筑，结构，给排水，暖通空调，电气等的专家设计师以外，包括后勤保障人员，共计60余人组成的医疗建筑上经验丰富的设计团队参与了设计。</p>
+<p>设计采用了多个“H”型模块排列而成，每50个床位为一个护理单元，需要配备的护士，医生，医疗器械，供氧系统等均由护理单元来进行计算。每4个护理单元形成一个组团，组团连接的“H”字中心部为公共区域，供医护人员工作。<sup><a target="_blank" rel="noopener" href="https://www.jfdaily.com/news/detail?id=204974">7</a></sup><br>已公开的图纸大致如下：</p>
+<img src="/2020/07/05/%E7%81%AB%E7%A5%9E%E5%B1%B1%E9%9B%B7%E7%A5%9E%E5%B1%B1%E5%BB%BA%E8%AE%BE%E4%B9%8B%E6%80%9D%E8%80%83/%E5%9B%BE%E7%BA%B8.jpg" class="">
+
+<p>设计上的使用寿命为5年，到期之后可以通过加固和重新检验来延长使用寿命，但是作为临时的传染病医院，一般不这样做。事实上，火神山雷神山两家医院均于4月中停止使用，实际使用寿命并没有超过三个月。</p>
+<p>如此模块式的医院，在未来可以通过3D打印来实现，不过现阶段来说这个技术受限于材料和打印机的限制，成本过于高昂。</p>
+<h5 id="施工大致"><a href="#施工大致" class="headerlink" title="施工大致"></a>施工大致</h5><p>施工上，除了中建三局以外，第一时间共有12家单位参与，从各地集结了4万多名管理施工人员，共投入了3500多台机械设备。<sup><a target="_blank" rel="noopener" href="http://www.xinhuanet.com/health/2020-04/03/c_1125807998.htm">8</a></sup></p>
+<p>日本网站上总结的工程表：<sup><a target="_blank" rel="noopener" href="https://www.plusweb.co.jp/blog/hospital-443.html">9</a></sup></p>
+<img src="/2020/07/05/%E7%81%AB%E7%A5%9E%E5%B1%B1%E9%9B%B7%E7%A5%9E%E5%B1%B1%E5%BB%BA%E8%AE%BE%E4%B9%8B%E6%80%9D%E8%80%83/%E5%B7%A5%E7%A8%8B.jpg" class="">
+
+<p>事实上，整地工程自1月23日，即前述的场地平整设计图完成之后即施工开始。这样在继续设计的同时，工程已经开工，争取了宝贵的时间。</p>
+<p>此外，由于这种施工的特殊性，需要大量的城市维生管线接入，同时对施工材料，器械的入场便利性有特殊的要求，再加上全部智能医院的所需，医院选址于城市近郊。</p>
+<p>整体医院属于预计短期使用的预制件组装房，地基施工只基本只包括混凝土地面浇铸，不需要打地基桩，因此在施工上可以对地基沉降等的要求稍微低一些。</p>
+<p>在施工的高效化上，每相邻的两个病房之间保9.6m的间距，在这个空间内可以令施工重机进入，多个机械同时作业提高了工作效率。</p>
+<img src="/2020/07/05/%E7%81%AB%E7%A5%9E%E5%B1%B1%E9%9B%B7%E7%A5%9E%E5%B1%B1%E5%BB%BA%E8%AE%BE%E4%B9%8B%E6%80%9D%E8%80%83/%E6%96%BD%E5%B7%A5%E5%8D%B0%E8%B1%A1.jpg" class="">
+
+<p>当然，还有众所周知的 <strong>“视频直播施工”</strong>，在全世界的注视下，24小时轮换不停地进行施工，从而保障医院按期完工。</p>
+<h5 id="换气设备10"><a href="#换气设备10" class="headerlink" title="换气设备10"></a>换气设备<sup><a target="_blank" rel="noopener" href="https://www.sohu.com/a/370863766_775609">10</a></sup></h5><p>由于使用性质为传染病医院，所以选址位于武汉主导风向东北风的下风向，并且在医院的下风向为水体，基本保障了医院的污染对于城市的影响最低。</p>
+<p>设计上，考虑到武汉冬季的气温较低湿度较大，医院设计在考虑防潮的同时，采用了分体空调，在进风段设置了加热装置，通风管道也进行了保温施工。</p>
+<p>在设计分区上，清洁区，半污染区与污染区分开，保证了清洁的医护通道，一般的医护通道与病人的动线区分开，中间设有缓冲区，不直接交叉。</p>
+<img src="/2020/07/05/%E7%81%AB%E7%A5%9E%E5%B1%B1%E9%9B%B7%E7%A5%9E%E5%B1%B1%E5%BB%BA%E8%AE%BE%E4%B9%8B%E6%80%9D%E8%80%83/%E6%B8%85%E6%B4%81%E9%80%9A%E9%81%93.jpeg" class="">
+
+<p>此外在通风系统上，清洁区域，半污染区与污染区分别设置独立的通风系统，保障办公室，值班室等清洁区为正压，护士站，处置诊疗室等半污染区为微负压，病房及病员通道等污染区为负压，从而保证了气流的正向流动，没有交叉污染。相邻的区域的压差不小于5Pa。</p>
+<table>
+<thead>
+<tr>
+<th>服务区域</th>
+<th>负压病房</th>
+<th>缓冲间</th>
+<th>洁净医护走廊</th>
+<th>办公/更衣</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>压力值</td>
+<td>-15Pa</td>
+<td>0Pa</td>
+<td>5Pa</td>
+<td>10Pa</td>
+</tr>
+<tr>
+<td>来源：火神山空调设计说明（摘自新闻<sup><a target="_blank" rel="noopener" href="https://www.sohu.com/a/370863766_775609">10</a></sup>）</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>除了保证压力之外，医院还对空气的过滤有很高的要求，具体此处不再详述。</p>
+<h5 id="通信设备11"><a href="#通信设备11" class="headerlink" title="通信设备11"></a>通信设备<sup><a target="_blank" rel="noopener" href="https://www.huawei.com/cn/publications/winwin-magazine/36/huo-shen-shan">11</a></sup></h5><p>1月23日施工开始后，三大运营商接到通知，随即开展覆盖两家医院的4G、5G网络工程建设。湖北移动、湖北联通武汉分公司与华为公司和设计院等单位一起，立即开始规划，设计和物资的协调。</p>
+<p>24日除夕上午现场勘查完成，建设方案确定，下午完成设备物资等的调配，当晚即开始施工。</p>
+<p>25日大年初一上午，完成光纤铺设、基站天线架设和主设备安装等工作，下午完成了基站的开通和调测，晚上则完成了业务测试和网络优化工作。</p>
+<p>整个5G网络从规划到落地共用了仅3天的时间。</p>
+<p>此外，华为向火神山医院捐赠了80%的网络通信设备，包括无线AP、接入网络、汇聚网络、核心网络、视频监控和远程会议系统等共几千台设备，提供了高标准的CloudCampus智简园区的方案，在保证整个医院无死角的Wi-Fi覆盖，同时也满足了视频监控等大量需要的带宽。</p>
+<p>关于IoT，所有病房里安装了大量的物联网设备，对于药房，进行其温湿度监控；对于隔离病房里的病患也进行了监控，并配有移动护理的腕带，保障随时了解其情况；对于传染垃圾也有IoT设备进行追溯。从入到出不仅为医院的管理提供了便利，保证了服务质量和效率，从病患监控的设备上亦可以对个人状况进行实时的数据分析，以便做出更佳的决策。</p>
+<h5 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h5><p>国家电网进行施工，1月31日夜，医院正式通电。</p>
+<p>医院配有近4万平米的绿化建设，主要为景观绿化，设计于1月29日完成。<em>当时有质疑的声音说绿化可能导致病毒下渗至土壤，现在已经找不到原文。</em></p>
+<p>由于医院的特殊性，需要大量的医疗用氧，以及输氧管线。<em>之前有印象看到过总结文章，但是现在没有找到。</em> 医疗用氧由武钢提供，将原来工业用氧的生产线抽调制作医疗用氧，管线调配暂不清楚。</p>
+<h5 id="统率全局的PMr9"><a href="#统率全局的PMr9" class="headerlink" title="统率全局的PMr9"></a>统率全局的PMr<sup><a target="_blank" rel="noopener" href="https://www.plusweb.co.jp/blog/hospital-443.html">9</a></sup></h5><p>在保障这个大工程时，能够调配所有的资源的PMr(Project Manager)起到了核心的作用。</p>
+<p>为了保证以下工程顺利进行，总指挥调配所有能够支配的资源，并且保证各级，各层的沟通，工程的进行。能够胜任这个位置的，需要有足够的能力与魄力，也要承担足够的责任与压力。</p>
+<img src="/2020/07/05/%E7%81%AB%E7%A5%9E%E5%B1%B1%E9%9B%B7%E7%A5%9E%E5%B1%B1%E5%BB%BA%E8%AE%BE%E4%B9%8B%E6%80%9D%E8%80%83/pmr.jpg" class="">
+
+<p>此处工作的描述实际参照日文网站，实际上在公开搜索渠道能够查到的工程总指挥是中建三局的党委副书记、总经理陈卫国。 <sup><a target="_blank" rel="noopener" href="http://m.news.cctv.com/2020/04/05/ARTIRSQ2Ih2c5X710824XDVf200405.shtml">12</a></sup></p>
+<h4 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h4><p>稀里糊涂零零散散地总结了一气，现在依然是心潮澎湃，充满感动。自己的知识储备不足，也不足以描述整个过程中我感受到的冲击。虽然这次是在准备资料总结建设业在Covid-19影响下、影响后能做些什么，但是写完这篇我心里实际上知道，这个成功几乎是没法复制的。</p>
+<p>整个建设业在疫情影响之后能做的事情，或许与疫情之前能做到的事情差不太多。一直以来的思考是，建设业需要在一切既往的工程上面加上BIM/智能Robot施工等用来削减人工的应对措施，然而在紧急事态上，也是依然有需要调动足够大量的人工的需要的。</p>
+<p>对于自己来说，能够从这些资料中学到什么，能够把这些东西在之后的工作生活中活用多少，才是真正有意义的总结。</p>
+<p>于2020年7月5日<br>傍晚。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Memo/" rel="tag"># Memo</a>
+              <a href="/tags/excerpt/" rel="tag"># excerpt</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/06/28/Another%20Sunday/" rel="prev" title="Another Sunday">
+      <i class="fa fa-chevron-left"></i> Another Sunday
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/07/06/%E6%A2%85%E9%9B%A8%E9%9A%8F%E7%AC%94/" rel="next" title="梅雨随笔">
+      梅雨随笔 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#10%E5%A4%A9%E5%AE%8C%E5%B7%A5%E7%9A%84%E5%A4%A7%E5%9E%8B%E5%8C%BB%E9%99%A2%EF%BC%9A%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">10天完工的大型医院：概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B7%A5%E7%A8%8B%E4%B8%8A%E7%9A%84%E6%80%9D%E8%80%83"><span class="nav-number">2.</span> <span class="nav-text">工程上的思考</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%AE%BE%E8%AE%A1"><span class="nav-number">2.1.</span> <span class="nav-text">设计</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%96%BD%E5%B7%A5%E5%A4%A7%E8%87%B4"><span class="nav-number">2.2.</span> <span class="nav-text">施工大致</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8D%A2%E6%B0%94%E8%AE%BE%E5%A4%8710"><span class="nav-number">2.3.</span> <span class="nav-text">换气设备10</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%80%9A%E4%BF%A1%E8%AE%BE%E5%A4%8711"><span class="nav-number">2.4.</span> <span class="nav-text">通信设备11</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">2.5.</span> <span class="nav-text">其他</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BB%9F%E7%8E%87%E5%85%A8%E5%B1%80%E7%9A%84PMr9"><span class="nav-number">2.6.</span> <span class="nav-text">统率全局的PMr9</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%84%9F%E6%83%B3"><span class="nav-number">3.</span> <span class="nav-text">感想</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="SaGIT"
+      src="/images/avatar.jpeg">
+  <p class="site-author-name" itemprop="name">SaGIT</p>
+  <div class="site-description" itemprop="description">"So busy yearning for the moon that he never saw the sixpence at his feet."</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SaGIT</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

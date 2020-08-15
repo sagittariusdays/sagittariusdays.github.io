@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/slogo2.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/slogo2.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/slogo2.png">
+  <link rel="mask-icon" href="/images/slogo2.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Russo One:300,300italic,400,400italic,700,700italic|Titillium Web:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"sagittariusdays.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="今天准备写一篇摘抄，想放到路径不一样的地方。试了几次，没有成功，但是把现在为止的工作记录下来。 添加菜单首先在Next主题的_config.yml下面找到Menu在下面添加   1essay: &#x2F;essay&#x2F; 字段，这样子在渲染之后会在菜单栏里增加了一个essay的菜单。 接下来为这个菜单添加一个页面。 在terminal里进入工作文件夹输入 1hexo new page es">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用分类与图标">
+<meta property="og:url" content="http://sagittariusdays.github.io/2020/06/20/%E4%BD%BF%E7%94%A8%E5%88%86%E7%B1%BB%E4%B8%8E%E5%9B%BE%E6%A0%87/index.html">
+<meta property="og:site_name" content="SagittariusDays">
+<meta property="og:description" content="今天准备写一篇摘抄，想放到路径不一样的地方。试了几次，没有成功，但是把现在为止的工作记录下来。 添加菜单首先在Next主题的_config.yml下面找到Menu在下面添加   1essay: &#x2F;essay&#x2F; 字段，这样子在渲染之后会在菜单栏里增加了一个essay的菜单。 接下来为这个菜单添加一个页面。 在terminal里进入工作文件夹输入 1hexo new page es">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-06-20T12:00:21.000Z">
+<meta property="article:modified_time" content="2020-06-20T12:31:33.267Z">
+<meta property="article:author" content="SaGIT">
+<meta property="article:tag" content="Memo">
+<meta property="article:tag" content="Hexo">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://sagittariusdays.github.io/2020/06/20/%E4%BD%BF%E7%94%A8%E5%88%86%E7%B1%BB%E4%B8%8E%E5%9B%BE%E6%A0%87/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>使用分类与图标 | SagittariusDays</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">SagittariusDays</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Next page: BLANK.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://sagittariusdays.github.io/2020/06/20/%E4%BD%BF%E7%94%A8%E5%88%86%E7%B1%BB%E4%B8%8E%E5%9B%BE%E6%A0%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="SaGIT">
+      <meta itemprop="description" content=""So busy yearning for the moon that he never saw the sixpence at his feet."">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SagittariusDays">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          使用分类与图标
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-06-20 21:00:21 / 修改时间：21:31:33" itemprop="dateCreated datePublished" datetime="2020-06-20T21:00:21+09:00">2020-06-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>今天准备写一篇摘抄，想放到路径不一样的地方。<br>试了几次，没有成功，但是把现在为止的工作记录下来。</p>
+<h3 id="添加菜单"><a href="#添加菜单" class="headerlink" title="添加菜单"></a>添加菜单</h3><p>首先在Next主题的<code>_config.yml</code>下面找到<code>Menu</code><br>在下面添加  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">essay: &#x2F;essay&#x2F;</span><br></pre></td></tr></table></figure>
+<p>字段，这样子在渲染之后会在菜单栏里增加了一个essay的菜单。</p>
+<p>接下来为这个菜单添加一个页面。</p>
+<p>在<code>terminal</code>里进入工作文件夹<br>输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page essay</span><br></pre></td></tr></table></figure>
+<p>这样会在根目录的<code>\source</code>文件夹里生成一个<code>essay</code>的文件夹<br>打开文件夹里的<code>index.md</code>文件，即可对这个页面进行编辑。</p>
+<h3 id="给菜单添加图标"><a href="#给菜单添加图标" class="headerlink" title="给菜单添加图标"></a>给菜单添加图标</h3><p>依旧，在<code>_config.yml</code>文件下面找到<code>Menu</code><br>比如首页之后的<code>|| fa fa-home</code> 即为其图标。</p>
+<p>这个<code>fa</code>是指Font Awsome的图标库，可以从<a target="_blank" rel="noopener" href="https://fontawesome.com/v4.7.0/icons/">这里</a>查找喜欢的图标添加上去。</p>
+<p><em>事实上目前为止我添加了<code>essay</code>的<code>|| fa fa-pencil-square-o</code>图标与<code>excerpt</code>的<code>|| fa fa-newspaper</code>图标，但是不知为何，<code>essay</code>的图标并没有正确显示。</em></p>
+<h3 id="给菜单添加中文名称"><a href="#给菜单添加中文名称" class="headerlink" title="给菜单添加中文名称"></a>给菜单添加中文名称</h3><p>添加菜单成功之后会显示其英文的名称，如<code>essay</code>就只会显示<code>essay</code>。<br>这时候进入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\themes\next\languages\</span><br></pre></td></tr></table></figure>
+<p>文件夹，找到<code>zh-CN.yml</code>文件，在<code>menu</code>处添加刚刚添加过的字段与对应的翻译即可。</p>
+<h3 id="修改默认编辑方式"><a href="#修改默认编辑方式" class="headerlink" title="修改默认编辑方式"></a>修改默认编辑方式</h3><p>回到根目录下，进入<code>\scaffolds\</code>文件夹。<br>在<code>post.md</code>下面追加<code>categories</code>类别。<br>这样在新建文章的时候就会有<code>categories</code>字段，在这里进行编辑，即会给文章加上这一属性。</p>
+<p><em>现在添加了<code>excerpt</code>字段的文章并不会出现在<code>excerpt</code>分类里面，而是在<code>categories</code>下面的单独有一个<code>excerpt</code>分类。这个用法好像有点头绪，就是在<code>post.md</code>下面添加<code>excerpt</code>字段，这样就可以在摘抄的页面显示了，但是今天懒，之后再试吧。</em></p>
+<p>今天的Memo就记到此。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Memo/" rel="tag"># Memo</a>
+              <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/06/20/%E7%90%86%E7%A0%94%E6%96%B0%E5%86%A0%E9%A3%9E%E6%B2%AB%E8%B7%AF%E5%BE%84%E7%A0%94%E7%A9%B6/" rel="prev" title="理研新冠飞沫路径研究">
+      <i class="fa fa-chevron-left"></i> 理研新冠飞沫路径研究
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/06/21/%E5%92%96%E5%95%A1%E5%BA%97%E9%9A%8F%E6%83%B3/" rel="next" title="咖啡店随想">
+      咖啡店随想 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E8%8F%9C%E5%8D%95"><span class="nav-number">1.</span> <span class="nav-text">添加菜单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%99%E8%8F%9C%E5%8D%95%E6%B7%BB%E5%8A%A0%E5%9B%BE%E6%A0%87"><span class="nav-number">2.</span> <span class="nav-text">给菜单添加图标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%99%E8%8F%9C%E5%8D%95%E6%B7%BB%E5%8A%A0%E4%B8%AD%E6%96%87%E5%90%8D%E7%A7%B0"><span class="nav-number">3.</span> <span class="nav-text">给菜单添加中文名称</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%BC%96%E8%BE%91%E6%96%B9%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">修改默认编辑方式</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="SaGIT"
+      src="/images/avatar.jpeg">
+  <p class="site-author-name" itemprop="name">SaGIT</p>
+  <div class="site-description" itemprop="description">"So busy yearning for the moon that he never saw the sixpence at his feet."</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SaGIT</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

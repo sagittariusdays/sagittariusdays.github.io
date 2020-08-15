@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/slogo2.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/slogo2.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/slogo2.png">
+  <link rel="mask-icon" href="/images/slogo2.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Russo One:300,300italic,400,400italic,700,700italic|Titillium Web:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"sagittariusdays.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="本文暂不插图，具体图片会在详解的各个文章中插入。  ARDUINO这几天入手了Arduino Uno，以及一些传感器，从0开始学起。 学生时代就听说单片机很难，实际上手一操作，感觉确实如此。 有些东西，感觉自己如果不记下来的话就会忘了，所以在这里MEMO一下。 基板现在入手的基板一共两种：Arduino UNO和Arduino Nano及其替代品。 一开始做为入门，买了一块UNO，然后用着用着发现">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IoT出道">
+<meta property="og:url" content="http://sagittariusdays.github.io/2020/08/15/IoT%E5%87%BA%E9%81%93/index.html">
+<meta property="og:site_name" content="SagittariusDays">
+<meta property="og:description" content="本文暂不插图，具体图片会在详解的各个文章中插入。  ARDUINO这几天入手了Arduino Uno，以及一些传感器，从0开始学起。 学生时代就听说单片机很难，实际上手一操作，感觉确实如此。 有些东西，感觉自己如果不记下来的话就会忘了，所以在这里MEMO一下。 基板现在入手的基板一共两种：Arduino UNO和Arduino Nano及其替代品。 一开始做为入门，买了一块UNO，然后用着用着发现">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-08-14T23:12:56.000Z">
+<meta property="article:modified_time" content="2020-08-15T07:08:48.285Z">
+<meta property="article:author" content="SaGIT">
+<meta property="article:tag" content="Memo">
+<meta property="article:tag" content="Arduino">
+<meta property="article:tag" content="单片机">
+<meta property="article:tag" content="IoT">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://sagittariusdays.github.io/2020/08/15/IoT%E5%87%BA%E9%81%93/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>IoT出道 | SagittariusDays</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">SagittariusDays</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Next page: BLANK.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://sagittariusdays.github.io/2020/08/15/IoT%E5%87%BA%E9%81%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="SaGIT">
+      <meta itemprop="description" content=""So busy yearning for the moon that he never saw the sixpence at his feet."">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SagittariusDays">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          IoT出道
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-08-15 08:12:56 / 修改时间：16:08:48" itemprop="dateCreated datePublished" datetime="2020-08-15T08:12:56+09:00">2020-08-15</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Memo/" itemprop="url" rel="index"><span itemprop="name">Memo</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Memo/IoT/" itemprop="url" rel="index"><span itemprop="name">IoT</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Memo/IoT/Arduino/" itemprop="url" rel="index"><span itemprop="name">Arduino</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><strong><em>本文暂不插图，具体图片会在详解的各个文章中插入。</em></strong> </p>
+<h3 id="ARDUINO"><a href="#ARDUINO" class="headerlink" title="ARDUINO"></a>ARDUINO</h3><p>这几天入手了Arduino Uno，以及一些传感器，从0开始学起。</p>
+<p>学生时代就听说单片机很难，实际上手一操作，感觉确实如此。</p>
+<p>有些东西，感觉自己如果不记下来的话就会忘了，所以在这里MEMO一下。</p>
+<h3 id="基板"><a href="#基板" class="headerlink" title="基板"></a>基板</h3><p>现在入手的基板一共两种：Arduino UNO和Arduino Nano及其替代品。</p>
+<p>一开始做为入门，买了一块UNO，然后用着用着发现小型化和Breadboard用着方便的小号版本更好，于是就买了Nano。然而由于事前准备不足，并不知道Nano已经停产，这是一个小小的失误。</p>
+<p>UNO使用的是USB type A/B，Nano使用的是Type B Mini。这两种接口都并不常用，所以在入手基板之后再去买线，又花去了一部分精力。</p>
+<p>替换用的基板是Elegoo的Nano互换，同样使用Type B Mini口。</p>
+<p>之后如果再准备的话可能会着手用Micro B的板子，比如Nano Every等等。</p>
+<h3 id="传感器"><a href="#传感器" class="headerlink" title="传感器"></a>传感器</h3><p>首先最简单易上手的就是温湿度传感器。</p>
+<p>这次入手的是DHT22，使用时需要加载DHT专用的Library，输出Pin可以输出温度与湿度的信号。</p>
+<p>为了更加小型化与精细化，入手了Switch-Science的BME280气压温湿计。不过这个由于和很多地方的BME280模块略有不同，而官方给出的Sample也并不能很好的使用，所以暂时还放置于一边。</p>
+<p>此外，由于入了一包Seeedstudio的Sidekick工具包，里面包含了光度计，Thermistor等比较常用的传感器，还有电阻，开关和发光二极管等，用Sidekick包里的元件可以即刻开始电子工作。</p>
+<h3 id="显示屏"><a href="#显示屏" class="headerlink" title="显示屏"></a>显示屏</h3><p>单片机用的显示屏种类繁多，这次（碰巧）买到了DSD Tech的0.91inch，128x32的超小OLED。</p>
+<p>在DSD的Library，u8glib里，需要事先设定显示屏的种类，然后才能继续工作。</p>
+<h3 id="Amazon和实体店"><a href="#Amazon和实体店" class="headerlink" title="Amazon和实体店"></a>Amazon和实体店</h3><p>起步的用品与工具就是以上。当然，现在的实验电路都是在面包板上完成，之后实装的时候还需要焊锡与万用电表。这些之后再议。</p>
+<p>Arduino与互换品基本上是从Amazon上邮购的。</p>
+<p>实体店的话，本来是想去秋叶原的<a target="_blank" rel="noopener" href="http://akizukidenshi.com/catalog/">秋月电子通商</a>，毕竟是有名的电子电气店，可是连休中去了几次都不开门。Sidekick包以及其他的一些小传感器都是购于旁边的<a target="_blank" rel="noopener" href="https://www.sengoku.co.jp/">千石电商</a>的秋叶原本店。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Memo/" rel="tag"># Memo</a>
+              <a href="/tags/Arduino/" rel="tag"># Arduino</a>
+              <a href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/" rel="tag"># 单片机</a>
+              <a href="/tags/IoT/" rel="tag"># IoT</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/07/20/%E4%B8%96%E4%BA%8B%E6%97%A0%E5%B8%B8/" rel="prev" title="世事无常">
+      <i class="fa fa-chevron-left"></i> 世事无常
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/08/16/%E4%BB%8A%E5%A4%A9%E5%B0%B1%E8%BF%99%E6%A0%B7%E5%90%A7/" rel="next" title="今天就这样吧">
+      今天就这样吧 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#ARDUINO"><span class="nav-number">1.</span> <span class="nav-text">ARDUINO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9D%BF"><span class="nav-number">2.</span> <span class="nav-text">基板</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%A0%E6%84%9F%E5%99%A8"><span class="nav-number">3.</span> <span class="nav-text">传感器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%98%BE%E7%A4%BA%E5%B1%8F"><span class="nav-number">4.</span> <span class="nav-text">显示屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Amazon%E5%92%8C%E5%AE%9E%E4%BD%93%E5%BA%97"><span class="nav-number">5.</span> <span class="nav-text">Amazon和实体店</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="SaGIT"
+      src="/images/avatar.jpeg">
+  <p class="site-author-name" itemprop="name">SaGIT</p>
+  <div class="site-description" itemprop="description">"So busy yearning for the moon that he never saw the sixpence at his feet."</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SaGIT</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
